@@ -8,16 +8,19 @@
 
 $currentDirectory = Get-Location 
 $templog = Get-Content -Path ENv:\USERPROFILE
-# date for banner and time elapsed
-$d=date
+# date for banner
+$ddd=date
 # Display the current directory and log location
 Write-Output "*****************"
-write-output "Happy $($d.dayofweek)"
+write-output "Happy $($ddd.dayofweek)"
 WRITE-OUTPUT "Starting directory file search.  You are at directory: $($currentDirectory.Path)"
 write-output "This will write to screen and also log data to $($templog)"
 Write-output "Are you Ready? If not, type Ctrl-C to break"
 pause
 
+#Start of directory scan
+# date for banner
+$d=date
 ### ask user what directory to look into
 ##$start_dir = read-host "Enter the starting directory or hit enter to continue"
 ##  ask user what megabyte size (or defaults)
